@@ -108,7 +108,7 @@ export default class Task extends Component {
                        </div>
                     </div>
                     <div className="col-sm-4 text-left">
-                        Location :
+                        Time Zone :
                         <div className="pl-1">
                           <InputText id="" value={this.state.selectedrow.tz} disabled/>
                        </div>
