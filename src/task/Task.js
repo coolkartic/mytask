@@ -89,7 +89,7 @@ export default class Task extends Component {
                     <Column field="real_name" header="Name"></Column>
                 </DataTable>
             </div>
-            <Dialog header={this.state.selectedrow.real_name} visible={this.state.displayBasic} style={{ width: '70vw' }} maximizable="displayBasic" maximized="displayBasic" footer={this.renderFooter()} onHide={() => this.onHide()}>
+            <Dialog header={this.state.selectedrow.real_name} visible={this.state.displayBasic} style={{ width: '70vw' }} maximizable='displayBasic' maximized='displayBasic' footer={this.renderFooter()} onHide={() => this.onHide()}>
                 <div className="row p-3">
                     <div className="col-sm-4 text-left">
                         Employee ID :
