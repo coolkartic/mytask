@@ -15,12 +15,13 @@ Get Code Clone From
   
   Runs the app in development mode.
   
+  
+  
   > my-task@0.1.0 start /home/szigony/Documents/Workspace/Task/FullThrottle/mytask-fullthrottlelabs
   > serve -s build
 
 
    ┌────────────────────────────────────────────────────┐
-   │                                                    │
    │   Serving!                                         │
    │                                                    │
    │   - Local:            http://localhost:5000        │
