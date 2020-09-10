@@ -1,0 +1,48 @@
+.header_cls
+{
+    font-size: 15px;
+    background-color: white;
+    padding: 8px;
+}
+
+.footer-section{
+    background-color: #0E1127;
+    min-height: 370px;
+}
+
+.clr-white {
+    color: white;
+}
+
+.footer-nav-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid hsla(0,0%,84%,.2);
+}
+p{
+    color: #20a8d8;
+}
+
+.font-43 {
+    font-family: judson,Georgia,times new roman,serif;
+    font-size: 43px;
+}
+.ally-lines:before, .ally-lines:after {
+    content: '';
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+    background: #000;
+    margin: 0 0.5em 0.25em .5em;
+}
+
+.btn-primary:hover {
+    color: #1985ac;
+    background-color: #fff;
+    border-color: #1985ac;
+}
+
+.font-size-16 {
+    font-size: 16px;
+}
