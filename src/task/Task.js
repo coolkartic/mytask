@@ -40,8 +40,7 @@ export default class Task extends Component {
     renderFooter(name) {
         return (
             <div>
-                <Button label="No" icon="pi pi-times" onClick={() => this.onHide()} className="p-button-text" />
-                <Button label="Yes" icon="pi pi-check" onClick={() => this.onHide()} autoFocus />
+                <Button label="Cancel" icon="pi pi-check" onClick={() => this.onHide()} autoFocus />
             </div>
         );
     }
