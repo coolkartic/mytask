@@ -47,29 +47,34 @@ export default class Task extends Component {
     selected_date(picked){
         this.setState({activity_time:[]})
         let pick = picked.target.value
-        let pickedd = pick.toGMTString().slice(4).split(' ').slice(0, 4).join(' ');
+        let pickedd = pick.toString().slice(4).split(' ').slice(0, 3).join(' ');
+        console.log("pickd",pickedd);
         if(this.state.selectedrow.activity_periods.length  > 0 ){
            for(let i=0 ; i < this.state.selectedrow.activity_periods.length ; i++){
             let Get_date = this.state.selectedrow.activity_periods[i].start_time;
-            let conv_get_date = Get_date.slice(4).split(' ').slice(0, 4).join(' ')
+            let conv_get_date = Get_date.slice(4).split(' ').slice(0, 3).join(' ')
+        console.log("conv_get_date",conv_get_date);
+        debugger
                 if(conv_get_date == pickedd){
+                    debugger
                    var newArr = this.state.activity_time;
                    newArr.push(this.state.selectedrow.activity_periods[i]);
                    this.setState({activity_time:newArr})
                 }
                 else {
+                    debugger
                    console.log("false",this.state.activity_time_table);
                 }
            }
-           if (this.state.activity_time.length > 0){
-            debugger
-              this.setState({activity_time_table: true});
+        //    if (this.state.activity_time.length > 0){
+        //     debugger
+        //       this.setState({activity_time_table: true});
 
-           }
-           else{
-            debugger
-            this.setState({activity_time_table: false});
-         }
+        //    }
+        //    else{
+        //     debugger
+        //     this.setState({activity_time_table: false});
+        //  }
         }
         else {
             alert("No Activity Record Found");
