@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
-import ProductService from '../task/Test JSON.json';
+import  ProductService from '../task/Test JSON.json';
 import { Dialog } from 'primereact/dialog';
 import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
@@ -21,7 +21,6 @@ export default class Task extends Component {
             activity_time_table : Boolean = false,
         };
         this.displayBasic = this.onClick.bind(this);
-
     }
 
     componentDidMount() {
@@ -40,7 +39,7 @@ export default class Task extends Component {
     renderFooter(name) {
         return (
             <div>
-                <Button label="Cancel" icon="pi pi-check" onClick={() => this.onHide()} autoFocus />
+                <Button label="Close" icon="pi pi-check" onClick={() => this.onHide()} autoFocus />
             </div>
         );
     }
@@ -66,15 +65,6 @@ export default class Task extends Component {
                    console.log("false",this.state.activity_time_table);
                 }
            }
-        //    if (this.state.activity_time.length > 0){
-        //     debugger
-        //       this.setState({activity_time_table: true});
-
-        //    }
-        //    else{
-        //     debugger
-        //     this.setState({activity_time_table: false});
-        //  }
         }
         else {
             alert("No Activity Record Found");
@@ -118,10 +108,10 @@ export default class Task extends Component {
                     <div className="col-sm-4 text-left">
                         Pick a Date : <h6 class="badge badge-info font_sz">( Please Select Sep 2 For Testing )</h6>
                         <div className="pl-1">
-                        <Calendar id="basic" value={this.state.date1}      onChange={(e)=> this.selected_date(e)}/>
+                        <Calendar id="basic" value={this.state.date1} onChange={(e)=> this.selected_date(e)}/>
                         </div>
                     </div> 
-                    <div className="col-sm-4">
+                    <div className="col-sm-4 p-3">
                         <DataTable value={this.state.activity_time} header="Activity Log" footer="Footer" emptyMessage="No Data Found" className="p-datatable-gridlines" selectionMode="single" >
                             <Column field="start_time" header="Start Time" ></Column>
                             <Column field="end_time" header="End Time"></Column>
